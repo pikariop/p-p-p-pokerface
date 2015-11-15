@@ -29,12 +29,13 @@
 
 
 (defn pair? [hand]
+  (x-of-a-kind? hand 2))
 
 (defn three-of-a-kind? [hand]
-  nil)
+  (x-of-a-kind? hand 3))
 
 (defn four-of-a-kind? [hand]
-  nil)
+  (x-of-a-kind? hand 4))
 
 (defn flush? [hand]
   nil)
