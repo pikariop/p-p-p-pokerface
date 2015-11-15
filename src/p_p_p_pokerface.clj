@@ -50,7 +50,17 @@
        (rank-combos hand)))))
 
 (defn straight? [hand]
-  nil)
+  (let [ranks-of-hand (hand-ranks hand)
+        replace-aces (replace {14 1} ranks-of-hand)
+        straighten (fn [hnd]
+          (range
+            (apply min hnd)
+            (+ 1 (apply max hnd))))
+        verify-straight (fn [hnd]
+          (= (straighten hnd)
+             (sort hnd)))]
+    (or (verify-straight ranks-of-hand)
+        (verify-straight replace-aces))))
 
 (defn straight-flush? [hand]
   nil)
