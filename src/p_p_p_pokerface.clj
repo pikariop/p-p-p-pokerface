@@ -42,7 +42,7 @@
 
 
 (defn full-house? [hand]
-  nil)
+  (= [2 3] (sort (rank-combos hand))))
 
 (defn two-pairs? [hand]
   nil)
