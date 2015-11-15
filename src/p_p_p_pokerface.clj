@@ -22,6 +22,11 @@
 (defn hand-suits [hand]
   vals (map suit hand))
 
+(defn x-of-a-kind? [hand, x]
+  (contains?
+    (set (rank-combos hand))
+    x))
+
 
 (defn pair? [hand]
 
