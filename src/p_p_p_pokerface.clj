@@ -45,7 +45,9 @@
   (= [2 3] (sort (rank-combos hand))))
 
 (defn two-pairs? [hand]
-  nil)
+  (= 2
+     (count (filter (fn [x] (= x 2))
+       (rank-combos hand)))))
 
 (defn straight? [hand]
   nil)
