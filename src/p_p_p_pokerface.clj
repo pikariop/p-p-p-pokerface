@@ -16,10 +16,11 @@
   (vals (frequencies (hand-ranks hand))))
 
 (defn suit [card]
-  nil)
+  (let [[_ sui] card]
+    (str sui)))
+
 
 (defn pair? [hand]
-  nil)
 
 (defn three-of-a-kind? [hand]
   nil)
