@@ -19,6 +19,9 @@
   (let [[_ sui] card]
     (str sui)))
 
+(defn hand-suits [hand]
+  vals (map suit hand))
+
 
 (defn pair? [hand]
 
