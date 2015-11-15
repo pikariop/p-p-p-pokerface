@@ -38,7 +38,8 @@
   (x-of-a-kind? hand 4))
 
 (defn flush? [hand]
-  nil)
+  (= 1 (count (frequencies (hand-suits hand)))))
+
 
 (defn full-house? [hand]
   nil)
