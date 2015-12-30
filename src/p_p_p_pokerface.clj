@@ -76,8 +76,6 @@
                    [full-house? 6] [four-of-a-kind? 7]
                    [straight-flush? 8]}
         check-hand (fn [checker]
-          (if ((first checker) hand)
-            (second checker)
-            -1))]
-  (apply max (map check-hand checkers))))
+          ((first checker) hand))]
+  (apply max (map second (filter check-hand checkers)))))
 
